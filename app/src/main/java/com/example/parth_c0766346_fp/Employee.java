@@ -20,4 +20,9 @@ public class Employee {
 
     public static ArrayList<Employee> allEmpInformation = new ArrayList<>();
 
+    public double annualIncome(){
+
+        return monthlySalary*12;
+    }
+
 }
