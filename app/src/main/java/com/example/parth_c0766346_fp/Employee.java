@@ -33,4 +33,8 @@ public class Employee {
     public String toString() {
         return super.toString();
     }
+
+    public String showNameId(){
+        return String.format("Name: %s\nID: %d", name, id);
+    }
 }

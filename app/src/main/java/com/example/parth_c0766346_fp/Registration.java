@@ -2,6 +2,7 @@ package com.example.parth_c0766346_fp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -80,10 +81,10 @@ public class Registration extends AppCompatActivity {
                         Double.parseDouble(mSalary.getText().toString()), Double.parseDouble(oRate.getText().toString()), empV);
 
         }
-        
-        
+
         Employee.allEmpInformation.add(newEmp);
         Toast.makeText(this, "Congratulations !! Employee is registered successfully !!", Toast.LENGTH_SHORT).show();
-        
+        Intent i = new Intent(Registration.this, MainActivity.class);
+        startActivity(i);
     }
 }
