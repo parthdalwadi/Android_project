@@ -169,6 +169,52 @@
     </TableRow>
 
     <TableRow
+        android:id="@+id/rCtype"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:text="Car Type"/>
+        <EditText
+            android:id="@+id/carType"
+            android:hint="car type"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#ddd"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rSide"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:text="Side Car"
+            android:layout_gravity="center_vertical"/>
+        <RadioGroup
+            android:id="@+id/sideCar"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:layout_weight="1"
+                android:id="@+id/yes"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:layout_weight="1"
+                android:id="@+id/no"/>
+
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow
         android:id="@+id/rVmodel"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
@@ -216,6 +262,7 @@
 
     <Button
         android:text="Register"
+        android:onClick="registerEmployee"
         android:layout_margin="10dp"/>
 
 

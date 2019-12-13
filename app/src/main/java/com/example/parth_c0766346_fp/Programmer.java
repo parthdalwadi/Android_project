@@ -5,8 +5,8 @@ public class Programmer extends Employee {
     private final int GAIN_FACTOR_PROJECTS = 200;
     private int nbProjects;
 
-    public Programmer(String name, int birthYear, double monthlySalary, double rate, Vehicle empVehicle, int nbProjects) {
-        super(name, birthYear, monthlySalary, rate, empVehicle);
+    public Programmer(String name, int id, int birthYear, double monthlySalary, double rate, Vehicle empVehicle, int nbProjects) {
+        super(name, id, birthYear, monthlySalary, rate, empVehicle);
         this.nbProjects = nbProjects;
     }
 
