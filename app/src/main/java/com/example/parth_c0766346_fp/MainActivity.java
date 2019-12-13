@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -34,6 +35,17 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> empAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameID);
         allEmpList.setAdapter(empAdapter);
         empAdapter.notifyDataSetChanged();
+
+
+        allEmpList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent d = new Intent(MainActivity.this, Description.class);
+
+                d.putExtra("allInfo", Employee.allEmpInformation.get(position).toString());
+                startActivity(d);
+            }
+        });
 
 
     }
