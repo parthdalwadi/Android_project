@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             nameID.add(e.showNameId());
         }
 
-
+        System.out.println(nameID);
         ArrayAdapter<String> empAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameID);
         allEmpList.setAdapter(empAdapter);
         empAdapter.notifyDataSetChanged();
@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent d = new Intent(MainActivity.this, Description.class);
-
+                System.out.println("inside function");
+                System.out.println(Employee.allEmpInformation.get(position).toString());
                 d.putExtra("allInfo", Employee.allEmpInformation.get(position).toString());
                 startActivity(d);
             }

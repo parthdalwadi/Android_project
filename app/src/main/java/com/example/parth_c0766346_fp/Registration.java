@@ -28,7 +28,7 @@ public class Registration extends AppCompatActivity {
         vehicle_type = findViewById(R.id.vehicleType);
         employeePosition = findViewById(R.id.employeeType);
         noOfTask = findViewById(R.id.taskDone);
-
+        type = findViewById(R.id.carType);
 
         eFname = findViewById(R.id.firstName);
         eLname = findViewById(R.id.lastName);
@@ -56,6 +56,7 @@ public class Registration extends AppCompatActivity {
 
 
         Vehicle empV;
+        System.out.println("stage 1");
         switch (vehicle_type.getCheckedRadioButtonId()){
 
 
@@ -64,6 +65,7 @@ public class Registration extends AppCompatActivity {
                 break;
             default:
                 Boolean haveSidecar = false;
+
                 switch(sidecar.getCheckedRadioButtonId()){
                     case R.id.yes: haveSidecar = true; break;
                     default: haveSidecar = false; break;
@@ -73,6 +75,7 @@ public class Registration extends AppCompatActivity {
                 break;
 
         }
+        System.out.println("stage 2");
 
         Employee newEmp;
         switch (employeePosition.getSelectedItem().toString()){
@@ -94,10 +97,15 @@ public class Registration extends AppCompatActivity {
                         Double.parseDouble(mSalary.getText().toString()), Double.parseDouble(oRate.getText().toString()), empV);
 
         }
+        System.out.println("stage 3");
 
         Employee.allEmpInformation.add(newEmp);
         Toast.makeText(this, "Congratulations !! Employee is registered successfully !!", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(Registration.this, MainActivity.class);
+        System.out.println("stage 4");
+
         startActivity(i);
+
+
     }
 }
