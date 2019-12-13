@@ -31,7 +31,17 @@ public class Employee {
     @NonNull
     @Override
     public String toString() {
-        return super.toString();
+        String des =  String.format("Name: %s, %s\n Age: %d", name, getDesignation(), age);
+        String veh = empVehicle.toString();
+        String info = String.format("Occupation rate: %.2f\n Annual Income is : %.2f \n %s",
+                rate, annualIncome());
+
+        return des + veh + info;
+
+    }
+
+    public String getDesignation(){
+        return "Employee";
     }
 
     public String showNameId(){

@@ -1,5 +1,7 @@
 package com.example.parth_c0766346_fp;
 
+import androidx.annotation.NonNull;
+
 public class Tester extends Employee {
     private final int GAIN_FACTOR_ERROR = 10;
     int nbBugs;
@@ -14,5 +16,14 @@ public class Tester extends Employee {
         return super.annualIncome() + (nbBugs*GAIN_FACTOR_ERROR);
     }
 
+    @Override
+    public String getDesignation() {
+        return "Tester";
+    }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return super.toString() + String.format("He/She has corrected %d bugs.", nbBugs );
+    }
 }
