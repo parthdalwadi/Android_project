@@ -180,20 +180,20 @@ public class Registration extends AppCompatActivity {
                 Employee newEmp;
                 switch (employeePosition.getSelectedItem().toString()) {
                     case "Manager":
-                        newEmp = new Manager(eFname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
+                        newEmp = new Manager(eFname.getText().toString()+ eLname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
                                 Double.parseDouble(mSalary.getText().toString()), Integer.parseInt(oRate.getText().toString()), empV, Integer.parseInt(noOfTask.getText().toString()));
                         break;
                     case "Programmer":
-                        newEmp = new Programmer(eFname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
+                        newEmp = new Programmer(eFname.getText().toString()+ eLname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
                                 Double.parseDouble(mSalary.getText().toString()), Integer.parseInt(oRate.getText().toString()), empV, Integer.parseInt(noOfTask.getText().toString()));
                         break;
 
                     case "Tester":
-                        newEmp = new Tester(eFname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
+                        newEmp = new Tester(eFname.getText().toString() + eLname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
                                 Double.parseDouble(mSalary.getText().toString()), Integer.parseInt(oRate.getText().toString()), empV, Integer.parseInt(noOfTask.getText().toString()));
                         break;
                     default:
-                        newEmp = new Employee(eFname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
+                        newEmp = new Employee(eFname.getText().toString()+ eLname.getText().toString(), Integer.parseInt(empid.getText().toString()), Integer.parseInt(bYear.getText().toString()),
                                 Double.parseDouble(mSalary.getText().toString()), Integer.parseInt(oRate.getText().toString()), empV);
 
                 }

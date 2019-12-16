@@ -16,8 +16,8 @@ public class Vehicle {
     @Override
     public String toString() {
 
-        return "Employee has a" + getType() +
-                "\n\t - make:" + make + "\n\t - plate:" + plate + "\n\t - color:" + color;
+        return "Employee has a " + getType() +
+                "\n\t - make: " + make + "\n\t - plate: " + plate + "\n\t - color: " + color;
 
     }
 
