@@ -84,7 +84,7 @@
             android:text="Occupation rate"/>
         <EditText
             android:id="@+id/occupationRate"
-            android:hint="monthly salary"
+            android:hint="occupation rate"
             android:inputType="numberDecimal"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
@@ -127,7 +127,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
         <TextView
-            android:text="# task"/>
+            android:text="# task"
+            android:id="@+id/taskLabel"/>
         <EditText
             android:id="@+id/taskDone"
             android:hint="number"
@@ -139,6 +140,7 @@
 
     <TableRow
         android:id="@+id/rVtype"
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
@@ -155,6 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Car"
+                android:onClick="onVehicleSelect"
                 android:layout_weight="1"
                 android:id="@+id/car"/>
 
@@ -162,6 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Motorbike"
+                android:onClick="onVehicleSelect"
                 android:layout_weight="1"
                 android:id="@+id/moto"/>
 
@@ -170,6 +174,7 @@
 
     <TableRow
         android:id="@+id/rCtype"
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
@@ -185,6 +190,7 @@
 
     <TableRow
         android:id="@+id/rSide"
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
@@ -262,6 +268,7 @@
 
     <Button
         android:text="Register"
+        android:background="#0b0"
         android:onClick="registerEmployee"
         android:layout_margin="10dp"/>
 
