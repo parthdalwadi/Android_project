@@ -58,12 +58,12 @@ public class Registration extends AppCompatActivity {
 
                         break;
                     case 2:
-                        dasignation = "# projects";
+                        dasignation = "# bugs";
                         veh_type.setVisibility(View.VISIBLE);
 
                         break;
                     case 3:
-                        dasignation = "# bugs";
+                        dasignation = "# projects";
                         veh_type.setVisibility(View.VISIBLE);
 
                         break;

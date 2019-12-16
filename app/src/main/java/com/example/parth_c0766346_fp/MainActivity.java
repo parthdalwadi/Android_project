@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button addBtn;
     ListView allEmpList;
+    SearchView srch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         addBtn = findViewById(R.id.addEmp);
         allEmpList = findViewById(R.id.empList);
+        srch = findViewById(R.id.searchbar);
+
 
         ArrayList<String> nameID = new ArrayList<>();
 
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         System.out.println(nameID);
-        ArrayAdapter<String> empAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameID);
+        final ArrayAdapter<String> empAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameID);
         allEmpList.setAdapter(empAdapter);
         empAdapter.notifyDataSetChanged();
 
@@ -45,6 +49,20 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(Employee.allEmpInformation.get(position).toString());
                 d.putExtra("allInfo", Employee.allEmpInformation.get(position).toString());
                 startActivity(d);
+            }
+        });
+
+
+        srch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                empAdapter.getFilter().filter(newText);
+                return false;
             }
         });
 
