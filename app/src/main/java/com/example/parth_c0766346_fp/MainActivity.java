@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (e.getId() == idselected){
                         allinformation = e.toString();
+                        break;
                     }
 
                 }
