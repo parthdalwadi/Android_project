@@ -71,6 +71,8 @@ public class Registration extends AppCompatActivity {
                         dasignation = "# tasks";
 
                         veh_type.setVisibility(View.GONE);
+                        car_type.setVisibility(View.GONE);
+                        side_car.setVisibility(View.GONE);
                         break;
                 }
 

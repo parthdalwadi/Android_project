@@ -41,9 +41,9 @@ public class Employee {
     @NonNull
     @Override
     public String toString() {
-        String des =  String.format("Name: %s, %s\n Age: %d\n", name, getDesignation(), age);
+        String des =  String.format("Name: %s,A %s\n Age: %d\n", name, getDesignation(), age);
         String veh = empVehicle.toString();
-        String info = String.format("Occupation rate: %02d\n Annual Income is : $ %.2f \n",
+        String info = String.format("\nOccupation rate: %02d\n Annual Income is : $ %.2f \n",
                 rate, annualIncome());
 
         return des + veh + info;

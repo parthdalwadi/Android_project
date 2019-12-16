@@ -246,7 +246,6 @@
         <EditText
             android:id="@+id/plateNumber"
             android:hint="plate number"
-            android:inputType="number"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="#ddd"/>
@@ -269,6 +268,7 @@
     <Button
         android:text="Register"
         android:background="#0b0"
+        android:textColor="#fff"
         android:onClick="registerEmployee"
         android:layout_margin="10dp"/>
 

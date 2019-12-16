@@ -36,6 +36,7 @@
         android:background="#0b0"
         android:onClick="addNewEmployee"
         android:text="Add New Employee"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
