@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -44,10 +45,24 @@ public class MainActivity extends AppCompatActivity {
         allEmpList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent d = new Intent(MainActivity.this, Description.class);
-                System.out.println("inside function");
-                System.out.println(Employee.allEmpInformation.get(position).toString());
-                d.putExtra("allInfo", Employee.allEmpInformation.get(position).toString());
+
+                String s = (String) allEmpList.getItemAtPosition(position);
+
+                int idselected =  Integer.parseInt(s.split("ID :")[1]);
+
+                Toast.makeText(MainActivity.this, String.valueOf(idselected), Toast.LENGTH_SHORT).show();
+                String allinformation = "";
+                for (Employee e:
+                     Employee.allEmpInformation) {
+
+                    if (e.getId() == idselected){
+                        allinformation = e.toString();
+                    }
+
+                }
+
+           Intent d = new Intent(MainActivity.this, Description.class);
+                d.putExtra("allInfo", allinformation);
                 startActivity(d);
             }
         });

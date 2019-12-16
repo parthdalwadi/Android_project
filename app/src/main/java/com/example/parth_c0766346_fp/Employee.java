@@ -58,6 +58,6 @@ public class Employee {
     }
 
     public String showNameId(){
-        return String.format("Name: %s\nID: %d", name, id);
+        return String.format("Name: %s\nID :%d", name, id);
     }
 }
